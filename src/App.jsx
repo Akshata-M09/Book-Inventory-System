@@ -3,13 +3,10 @@ import './App.css'
 import BookTable from './BookTable';
 
 function App() {
-  const [bookData, ] = useState(books);
-
   return (
       <>
         <BookTable />
       </>
-    
   )
 }
 
