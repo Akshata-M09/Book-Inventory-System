@@ -1,0 +1,117 @@
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Enables scrolling for small screens */
+  }
+  
+  .book-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: left;
+  }
+  
+  .book-table th,
+  .book-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+  }
+  
+  .book-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+    
+  .view-btn,
+  .edit-btn,
+  .delete-btn {
+    padding: 5px 10px;
+    margin: 2px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .view-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .edit-btn {
+    background-color: #ffc107;
+    color: black;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  /* Form Container */
+  .add-book-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* Form Title */
+  .form-title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+  }
+  
+  .form-subtitle {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Labels */
+  .add-book-form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+    margin-top: 5px;
+  }
+  
+  /* Input Fields */
+  .add-book-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s;
+  }
+  
+  .add-book-form input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Button */
+  .submit-btn {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
