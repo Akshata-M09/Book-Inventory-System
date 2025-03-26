@@ -1,0 +1,42 @@
+name: Deploy React 19 + Vite to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Change this if your default branch is different
+  
+  workflow_dispatch: # Allows manual triggering
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20  # Ensure Node.js 20+ for best compatibility
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+        env:
+          VITE_BASE: '/Book-Inventory-System/'  # Change to match your repo name if needed
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./dist  # Vite output folder
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
